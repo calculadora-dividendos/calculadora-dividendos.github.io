@@ -1,9 +1,9 @@
-function postProvents(stockCode, quantity, callbackSuccess, callbackErrror) {
+function postProvents(stockCode, quantity, startDate, endDate, callbackSuccess, callbackErrror) {
     var json = JSON.stringify({
         code: stockCode,
         quantity: quantity,
-        startDate: "2019-01-01",
-        endDate: "2019-12-30"
+        startDate: startDate,
+        endDate: endDate
     })
 
     $.ajax({

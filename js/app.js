@@ -1,12 +1,14 @@
 function search() {
 	var stockCode = document.getElementById("stockCode").value
 	var quantity = document.getElementById("quantity").value
+	var startDate = document.getElementById("startDate").value
+	var endDate = document.getElementById("endDate").value
 
-	if (validate(stockCode, quantity)) {
+	if (validate(stockCode, quantity, startDate, endDate)) {
 		$('#overlay').fadeIn()
 		$("#resultTable tr#columnResultID").remove();
 		hideAlert()
-		callPostProvents(stockCode, quantity)
+		callPostProvents(stockCode, quantity, startDate, endDate)
 	}
 }
 
@@ -16,8 +18,8 @@ function search() {
  * @param {String} stockCode 
  * @param {String} quantity 
  */
-function callPostProvents(stockCode, quantity) {
-	postProvents(stockCode, quantity, function callbackSuccess(result) {
+function callPostProvents(stockCode, quantity, startDate, endDate) {
+	postProvents(stockCode, quantity, startDate, endDate, function callbackSuccess(result) {
 		printValues(result)
 		
 	}, function callbackError() {
@@ -75,12 +77,11 @@ function printTable(data) {
 
 /**
  * Valida os campos inseridos pelo usuário
- * TODO: FALTA VALIDAR OS INPUTS
  * 
  * @param {String} stockCode 
  * @param {String} quantity 
  */
-function validate(stockCode, quantity) {
+function validate(stockCode, quantity, startDate, endDate) {
 	var isValid = true
 	if (stockCode == null || stockCode == "") {
 		isValid = false
@@ -88,7 +89,16 @@ function validate(stockCode, quantity) {
 	} else if (quantity == null || quantity == "" || quantity == 0) {
 		isValid = false
 		showAlert("Quantidade não pode ser vazio.")
-	} 
+	} else if (startDate == null || startDate == "") {
+		isValid = false
+		showAlert("Data inicial não pode ser vazia.")
+	} else if (endDate == null || endDate == "") {
+		isValid = false
+		showAlert("Data final não pode ser vazia.")
+	} else if (startDate > endDate) {
+		isValid = false
+		showAlert("Data final não pode ser maior que a data inicial.")
+	}
 	return isValid
 }
 
