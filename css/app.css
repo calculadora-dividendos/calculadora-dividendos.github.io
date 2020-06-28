@@ -1,0 +1,181 @@
+/*************************** 
+MAIN
+***************************/
+html, body {
+  height: 100%;
+}
+#main-container {
+	min-height: 40%;
+	margin-top: 20px;
+}
+#error-alert { 
+	font-family: monaco;
+	opacity: 100 !important;
+}
+#resume, #result, #error-alert {
+	display: none;
+}
+
+/*************************** 
+HEADER
+***************************/
+.header {
+	background: #2C2C2C;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+.header-title {
+	font-family: monaco;
+	color: #FFFFFF;
+	font-size: 56px !important;
+}
+.header-subtitle {
+	font-family: monaco;
+	color: #FFFFFF;
+	font-size: 18px !important;
+}
+.header-description {
+	font-family: monaco;
+	color: #FFFFFF;
+	font-size: 14px !important;
+}
+.header-spotlight {
+	color: #DCD427;
+	font-size: 20px;
+}
+
+/*************************** 
+FOOTER
+***************************/
+.footer {
+	background: #2C2C2C;
+	padding-top: 18px;
+	padding-bottom: 8px;
+	font-family: monaco;
+	color: #FFFFFF;
+	line-height: 80%;
+	font-size: 14px !important;
+}
+
+/*************************** 
+BODY
+***************************/
+.body-title {
+	color: #4C4C4C;
+	font-size: 20px !important;
+	line-height: 0%;
+	text-decoration: underline;
+	margin-top: 40px;
+}
+.body-description {
+	color: #4C4C4C;
+	font-size: 14px !important;
+}
+.body-item-input {
+	margin-top: -12px;
+}
+#body-summary {
+	color: #4C4C4C;
+	font-size: 12px;
+	line-height: 0%;
+}
+
+/*************************** 
+RADIO BUTTON
+***************************/
+/* #radio-button-yes {
+	color: #4C4C4C;
+	margin-right: 6px;
+}
+#radio-button-no {
+	color: #4C4C4C;
+	margin-right: 6px;
+	margin-left: 20px;
+} */
+
+/*************************** 
+TABLE
+***************************/
+.table {
+    table-layout: fixed;
+    font-size: 14px;
+}
+
+/*************************** 
+FILE
+***************************/
+/* .custom-file {
+	width: 100% !important;
+	height: 200px !important;
+	margin-bottom: 20px;
+	margin-top: 40px;
+}
+.custom-file-label {
+	width: 100% !important;
+	height: 200px !important;
+	margin-bottom: 20px;
+	text-align: center;
+	padding: 80px 0;
+}
+.custom-file-input {
+	width: 100% !important;
+	height: 200px !important;
+	margin-bottom: 20px;
+} */
+
+/*************************** 
+EXPORT
+***************************/
+/* #export-div {
+	margin-bottom: 20px;
+} */
+
+/*************************** 
+NOTES IMAGE
+***************************/
+.note-sample {
+	width: 450px;
+	height: 600px;
+}
+
+/*************************** 
+PAYPAL
+***************************/
+#paypal-button-container {
+	width: 100px;
+}
+
+/*************************** 
+LOADING
+***************************/
+#overlay {
+	background: #ffffff;
+	color: #2C2C2C;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: 5000;
+	top: 0;
+	left: 0;
+	float: left;
+	text-align: center;
+	padding-top: 25%;
+	opacity: .80;
+}
+.spinner {
+    margin: 0 auto;
+    height: 64px;
+    width: 64px;
+    animation: rotate 0.8s infinite linear;
+    border: 5px solid #2C2C2C;
+    border-right-color: transparent;
+    border-radius: 50%;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!-- ICON -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/app.css" />
+
+	<!-- JS -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/service/constants.js"></script>
+	<script type="text/javascript" src="js/service/service.js"></script>
+	<script type="text/javascript" src="js/service/mapper.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+
+	<title>Calculadora de Dividendos</title>
+
+</head>
+<body>
+
+	<!-- HEADER -->
+	<div class="header">
+		<div class="container">
+			<p class="header-title">Calculadora de Dividendos</p><br/>
+			<p class="header-subtitle">Chega de planilhas! Agora ficou muito mais fácil de calcular o IR do seu day trade.</p><br/>
+			<p class="header-description">Em poucos segundos você consegue calcular todas suas operações do mês, simples, fácil e rápido! <br/>Atualmente está disponível para as corretoras <span class="header-spotlight">TERRA</span>, <span class="header-spotlight">CLEAR</span>, <span class="header-spotlight">RICO</span>, <span class="header-spotlight">XP</span> e <span class="header-spotlight">MODAL</span> mas fique atento que em breve estará disponível para mais corretoras.</p>
+		</div>
+	</div>
+
+	<div class="container" id="main-container">
+		
+		<!-- ALERTAS -->
+		<div class="alert alert-danger alert-dismissible fade in" id="error-alert">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+		</div>
+
+		<div class="row">
+		    <div class="col">
+
+				<!-- Código da Ação -->
+				<div>
+					<p class="body-title">Código da Ação</p>
+					<p class="body-description">Informe abaixo o código da ação:</p>
+					<div class="text-center">           
+						<div class="input-group body-item-input">
+							<input type="text" class="form-control" id="stockCode">
+						</div>
+					</div>  
+				</div>
+			</div>
+
+			<div class="col">
+
+				<!-- Quantidade -->
+				<div>
+					<p class="body-title">Quantidade</p>
+					<p class="body-description">Informe abaixo quantos papeis você possui:</p>
+					<div class="text-center">           
+						<div class="input-group body-item-input">
+							<input type="text" class="form-control" id="quantity">
+						</div>
+					</div>  
+				</div>
+			</div>
+		</div>
+
+		<!-- PESQUISAR -->
+		<div id="search-div">
+			<br/>
+			<button type="button" class="btn btn-outline-success" onclick="search()">Pesquisar</button>
+		</div>
+
+		<!-- RESULTADO -->
+		<div id="tables">
+			<div id="result">
+				<p class="body-title">Resultado</p>
+				<p class="body-description">Segue abaixo as informações relacionadas ao pagamento de dividendos.</p>
+				<table class="table table-bordered" id="resultTable">
+					<thead>
+						<tr>
+							<th>Data de Pagamento</th>
+							<th>Tipo</th>
+							<th>DY</th>
+							<th>Valor por Ação</th>
+							<th>Total a Receber</th>
+						</tr>
+					</thead>
+				</table>
+
+				<br/>
+				<div id="body-summary">
+					<p><b>Tipo:</b> Tipo do pagamento (Dividendo ou JCP)</p>
+					<p><b>DY:</b> Rendimento de Dividendo</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- LOADING -->
+	<div id="overlay" style="display:none;">
+	    <div class="spinner"></div>
+	</div>
+</body>
+</html>
