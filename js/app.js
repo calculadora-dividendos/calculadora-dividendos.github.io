@@ -19,7 +19,7 @@ function search() {
  * @param {String} quantity 
  */
 function callPostProvents(stockCode, quantity, startDate, endDate) {
-	postProvents(stockCode, quantity, startDate, endDate, function callbackSuccess(result) {
+	postProvents(stockCode, startDate, endDate, function callbackSuccess(result) {
 		printValues(result)
 		
 	}, function callbackError() {
@@ -99,7 +99,7 @@ function validate(stockCode, quantity, startDate, endDate) {
 		isValid = false
 		showAlert("Data final não pode ser maior que a data inicial.")
 	}
-	return isValid
+	return true
 }
 
 /**
