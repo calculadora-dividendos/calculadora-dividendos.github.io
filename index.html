@@ -50,7 +50,7 @@
 					<p class="body-description">Informe o código da ação:</p>
 					<div class="text-center">           
 						<div class="input-group body-item-input">
-							<input type="text" class="form-control" id="stockCode">
+							<input type="text" onkeyup="this.value = this.value.toUpperCase();" class="form-control" id="stockCode">
 						</div>
 					</div>  
 				</div>
@@ -64,7 +64,7 @@
 					<p class="body-description">Informe quantos papeis você possui dessa ação:</p>
 					<div class="text-center">           
 						<div class="input-group body-item-input">
-							<input type="text" class="form-control" id="quantity">
+							<input type="number" class="form-control" id="quantity">
 						</div>
 					</div>  
 				</div>

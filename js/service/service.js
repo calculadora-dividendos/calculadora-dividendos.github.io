@@ -1,7 +1,7 @@
 function postProvents(stockCode, quantity, callbackSuccess, callbackErrror) {
     var json = JSON.stringify({
-        code: "TRPL4",
-        quantity: "1100",
+        code: stockCode,
+        quantity: quantity,
         startDate: "2019-01-01",
         endDate: "2019-12-30"
     })

@@ -31,17 +31,20 @@ function callPostProvents(stockCode, quantity) {
  * @param {JSON} result 
  */
 function printValues(result) {
-	$("#result").show()
-	$("#info").show()
-
-	printTable(result.data)
-	printInfo(result)
-
+	if (result.result.success) {
+		$("#result").show()
+		$("#info").show()
+	
+		printTable(result.data)
+		printInfo(result)
+	} else {
+		showAlert(result.result.description)
+	}
 	$('#overlay').fadeOut()
 }
 
 /**
- * 
+ * Exibe as informações da empresa
  * 
  * @param {JSON} result 
  */
@@ -72,6 +75,7 @@ function printTable(data) {
 
 /**
  * Valida os campos inseridos pelo usuário
+ * TODO: FALTA VALIDAR OS INPUTS
  * 
  * @param {String} stockCode 
  * @param {String} quantity 
