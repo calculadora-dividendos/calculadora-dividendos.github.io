@@ -12,7 +12,7 @@ html, body {
 	font-family: monaco;
 	opacity: 100 !important;
 }
-#resume, #result, #error-alert {
+#info, #result, #error-alert {
 	display: none;
 }
 
@@ -39,23 +39,6 @@ HEADER
 	color: #FFFFFF;
 	font-size: 14px !important;
 }
-.header-spotlight {
-	color: #DCD427;
-	font-size: 20px;
-}
-
-/*************************** 
-FOOTER
-***************************/
-.footer {
-	background: #2C2C2C;
-	padding-top: 18px;
-	padding-bottom: 8px;
-	font-family: monaco;
-	color: #FFFFFF;
-	line-height: 80%;
-	font-size: 14px !important;
-}
 
 /*************************** 
 BODY
@@ -79,19 +62,11 @@ BODY
 	font-size: 12px;
 	line-height: 0%;
 }
-
-/*************************** 
-RADIO BUTTON
-***************************/
-/* #radio-button-yes {
+.body-info {
 	color: #4C4C4C;
-	margin-right: 6px;
+	font-size: 14px !important;
+	margin: 0px;
 }
-#radio-button-no {
-	color: #4C4C4C;
-	margin-right: 6px;
-	margin-left: 20px;
-} */
 
 /*************************** 
 TABLE
@@ -99,50 +74,6 @@ TABLE
 .table {
     table-layout: fixed;
     font-size: 14px;
-}
-
-/*************************** 
-FILE
-***************************/
-/* .custom-file {
-	width: 100% !important;
-	height: 200px !important;
-	margin-bottom: 20px;
-	margin-top: 40px;
-}
-.custom-file-label {
-	width: 100% !important;
-	height: 200px !important;
-	margin-bottom: 20px;
-	text-align: center;
-	padding: 80px 0;
-}
-.custom-file-input {
-	width: 100% !important;
-	height: 200px !important;
-	margin-bottom: 20px;
-} */
-
-/*************************** 
-EXPORT
-***************************/
-/* #export-div {
-	margin-bottom: 20px;
-} */
-
-/*************************** 
-NOTES IMAGE
-***************************/
-.note-sample {
-	width: 450px;
-	height: 600px;
-}
-
-/*************************** 
-PAYPAL
-***************************/
-#paypal-button-container {
-	width: 100px;
 }
 
 /*************************** 

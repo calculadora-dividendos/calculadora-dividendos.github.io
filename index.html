@@ -28,8 +28,9 @@
 	<div class="header">
 		<div class="container">
 			<p class="header-title">Calculadora de Dividendos</p><br/>
-			<p class="header-subtitle">Chega de planilhas! Agora ficou muito mais fácil de calcular o IR do seu day trade.</p><br/>
-			<p class="header-description">Em poucos segundos você consegue calcular todas suas operações do mês, simples, fácil e rápido! <br/>Atualmente está disponível para as corretoras <span class="header-spotlight">TERRA</span>, <span class="header-spotlight">CLEAR</span>, <span class="header-spotlight">RICO</span>, <span class="header-spotlight">XP</span> e <span class="header-spotlight">MODAL</span> mas fique atento que em breve estará disponível para mais corretoras.</p>
+			<p class="header-subtitle">Quer saber o valor que você vai receber de dividendos? Agora ficou muito mais fácil, 
+				em poucos segundos você descobre quanto a empresa irá te pagar!
+			</p>
 		</div>
 	</div>
 
@@ -46,7 +47,7 @@
 				<!-- Código da Ação -->
 				<div>
 					<p class="body-title">Código da Ação</p>
-					<p class="body-description">Informe abaixo o código da ação:</p>
+					<p class="body-description">Informe o código da ação:</p>
 					<div class="text-center">           
 						<div class="input-group body-item-input">
 							<input type="text" class="form-control" id="stockCode">
@@ -60,7 +61,7 @@
 				<!-- Quantidade -->
 				<div>
 					<p class="body-title">Quantidade</p>
-					<p class="body-description">Informe abaixo quantos papeis você possui:</p>
+					<p class="body-description">Informe quantos papeis você possui dessa ação:</p>
 					<div class="text-center">           
 						<div class="input-group body-item-input">
 							<input type="text" class="form-control" id="quantity">
@@ -76,10 +77,19 @@
 			<button type="button" class="btn btn-outline-success" onclick="search()">Pesquisar</button>
 		</div>
 
+		<!-- INFORMAÇÕES -->
+		<div id="info">
+			<p class="body-title">Resultado</p>
+			<p class="body-description">Segue o valor consolidado.</p>
+			<p class="body-info"><b>Total:</b> <span id="info-total"></span></p>
+			<p class="body-info"><b>Nome da Empresa:</b> <span id="info-name"></span></p>
+			<p class="body-info"><b>Código da Empresa:</b> <span id="info-code"></span></p>
+		</div>
+		
 		<!-- RESULTADO -->
 		<div id="tables">
 			<div id="result">
-				<p class="body-title">Resultado</p>
+				<p class="body-title">Resultado Detalhado</p>
 				<p class="body-description">Segue abaixo as informações relacionadas ao pagamento de dividendos.</p>
 				<table class="table table-bordered" id="resultTable">
 					<thead>
@@ -98,6 +108,8 @@
 					<p><b>Tipo:</b> Tipo do pagamento (Dividendo ou JCP)</p>
 					<p><b>DY:</b> Rendimento de Dividendo</p>
 				</div>
+				<br/>
+				<br/>
 			</div>
 		</div>
 	</div>

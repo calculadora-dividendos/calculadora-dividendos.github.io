@@ -4,6 +4,7 @@ function search() {
 
 	if (validate(stockCode, quantity)) {
 		$('#overlay').fadeIn()
+		$("#resultTable tr#columnResultID").remove();
 		hideAlert()
 		callPostProvents(stockCode, quantity)
 	}
@@ -31,11 +32,23 @@ function callPostProvents(stockCode, quantity) {
  */
 function printValues(result) {
 	$("#result").show()
+	$("#info").show()
 
 	printTable(result.data)
-	print()
+	printInfo(result)
 
 	$('#overlay').fadeOut()
+}
+
+/**
+ * 
+ * 
+ * @param {JSON} result 
+ */
+function printInfo(result) {
+	document.getElementById("info-total").innerHTML = result.total
+	document.getElementById("info-name").innerHTML = result.companyName
+	document.getElementById("info-code").innerHTML = result.stockCode
 }
 
 /**
@@ -45,7 +58,7 @@ function printValues(result) {
  */
 function printTable(data) {
 	$.each(data, function (index, m) {
-	   var nTr = "<tr>"
+	   var nTr = "<tr id='columnResultID'>"
 	   nTr += "<td>" + m.paymentDay + "</td>"
 	   nTr += "<td>" + m.earningType + "</td>"
 	   nTr += "<td>" + m.dy + "</td>"
