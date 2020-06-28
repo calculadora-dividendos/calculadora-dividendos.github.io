@@ -6,9 +6,14 @@ function postProvents(stockCode, quantity, startDate, endDate, callbackSuccess, 
         endDate: endDate
     })
 
+    var headers = {
+        "Content-Security-Policy": "upgrade-insecure-requests"
+    }
+
     $.ajax({
         url: URL_PROVENTS + "/provents",
         type: 'POST',
+        headers: headers,
         data: json,
         contentType: "application/json; charset=utf-8",
         dataType   : "json",
